@@ -1,0 +1,56 @@
+[
+  {
+    "label": "首页",
+    "key": "/",
+    "icon": "HomeIcon"
+  },
+  {
+    "label": "题解",
+    "key": "/solution",
+    "icon": "SolutionIcon",
+    "children": [
+      {
+        "type": "group",
+        "label": "个人",
+        "key": "/solution/self",
+        "children": [
+          {
+            "label": "添加题解",
+            "key": "/solution/add"
+          },
+          {
+            "label": "我的题解",
+            "key": "/solution/list/my"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "分享",
+    "key": "/discuss",
+    "icon": "DiscussIcon",
+    "children": [
+      {
+        "type": "group",
+        "label": "个人",
+        "key": "/discuss/self",
+        "children": [
+          {
+            "label": "添加分享",
+            "key": "/discuss/add"
+          },
+          {
+            "label": "我的分享",
+            "key": "/discuss/list/my"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "label": "个人中心",
+    "key": "/setting",
+    "icon": "SelfIcon"
+  }
+]

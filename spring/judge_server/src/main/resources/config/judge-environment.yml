@@ -1,0 +1,10 @@
+#judge-environment:
+#  submission-path: D:/Project/nucoj/submissions
+#  script-path: D:/Project/nucoj/scripts
+#  resolution-path: D:/Project/nucoj/resolutions
+
+
+judge-environment:
+  submission-path: /usr/local/upload/submissions
+  script-path: /usr/local/upload/scripts
+  resolution-path: /usr/local/upload/resolutions

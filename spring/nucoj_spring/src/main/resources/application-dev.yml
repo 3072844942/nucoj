@@ -1,0 +1,24 @@
+spring:
+    # redis配置
+    redis:
+        host: localhost
+    rabbitmq:
+        host: localhost
+    data:
+        mongodb:
+            uri: mongodb://localhost:27017/web
+
+eureka:
+    instance:
+        prefer-ip-address: true  #注册服务的时候使用服务的ip地址进行注册
+    client:
+        service-url:
+            defaultZone: http://localhost:8100/eureka/
+
+# 上传模式 （http://和最后的/一定不能去！！！）
+upload:
+    local:
+        # nginx映射本地文件路径
+        url: http://localhost:9000/
+        # 本地文件存储路径
+        path: D:/Project/nucoj/upload/

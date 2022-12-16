@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    /*滚动条整体样式*/
+    ::-webkit-scrollbar {
+        width : 10px;  /*高宽分别对应横竖滚动条的尺寸*/
+        height: 1px;
+    }
+
+    /*滚动条里面小方块*/
+    ::-webkit-scrollbar-thumb {
+
+        border-radius   : 10px;
+        background-color: skyblue;
+        background-image: -webkit-linear-gradient(
+                        45deg,
+                        rgba(255, 255, 255, 0.2) 25%,
+                        transparent 25%,
+                        transparent 50%,
+                        rgba(255, 255, 255, 0.2) 50%,
+                        rgba(255, 255, 255, 0.2) 75%,
+                        transparent 75%,
+                        transparent
+        );
+    }
+
+    /*滚动条里面轨道*/
+    ::-webkit-scrollbar-track {
+        box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+        background   : #ededed;
+        border-radius: 10px;
+    }
+}
+
+
+a {
+    text-decoration: none;
+}
+
+// 从消失到出现
+@keyframes emergence {
+    0% {
+        margin-top: 30vh;
+        opacity: .2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// 不断闪动
+@keyframes shake {
+    0%, 100% {
+        text-shadow: -1.5px -1.5px 0 #0ff, 1.5px 1.5px 0 #f00;
+    }
+
+    25% {
+        text-shadow: 1.5px 1.5px 0 #0ff, -1.5px -1.5px 0 #f00;
+    }
+
+    50% {
+        text-shadow: 1.5px -1.5px 0 #0ff, 1.5px -1.5px 0 #f00;
+    }
+
+    75% {
+        text-shadow: -1.5px 1.5px 0 #0ff, -1.5px 1.5px 0 #f00;
+    }
+
+}

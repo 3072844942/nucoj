@@ -1,0 +1,15 @@
+spring:
+    application:
+        name: cloud
+
+server:
+    port: 8100
+eureka:
+    instance:
+        hostname: eureka-server
+        lease-renewal-interval-in-seconds: 30
+    client:
+        register-with-eureka: false  #不将自己注册到eureka上
+        fetch-registry: false  #不从eureka上获取服务的注册信息
+        service-url:
+            defaultZone: http://124.222.45.247:8100/eureka/

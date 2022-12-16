@@ -1,0 +1,25 @@
+spring:
+    # redis配置
+    redis:
+        host: 124.222.45.247
+        password: powerSmart
+    rabbitmq:
+        host: 124.222.45.247
+    data:
+        mongodb:
+            uri: mongodb://admin:124609@124.222.45.247:27017/web
+
+eureka:
+    instance:
+        prefer-ip-address: true  #注册服务的时候使用服务的ip地址进行注册
+    client:
+        service-url:
+            defaultZone: http://124.222.45.247:8100/eureka/
+
+# 上传模式 （http://和最后的/一定不能去！！！）
+upload:
+    local:
+        # nginx映射本地文件路径
+        url: https://www.static.snak.space/
+        # 本地文件存储路径
+        path: /usr/local/upload/
