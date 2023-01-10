@@ -52,7 +52,6 @@ function Problem(props: { userInfo: UserInfo }) {
     return (
         <div style={{
             width: '100%',
-            paddingLeft: params.contestId === undefined ? '3vw' : '0',
             display: 'flex',
         }}>
             <div

@@ -28,18 +28,6 @@ public class ContestServiceImpl implements ContestService {
     @Autowired
     private JudgeService judgeService;
 
-    /**
-     * 本地路径
-     */
-    @Value("${upload.local.path}")
-    private String localPath;
-
-    /**
-     * 访问url
-     */
-    @Value("${upload.local.url}")
-    private String localUrl;
-
     @Override
     public List<ContestDTO> getRecentContest(int size) {
         // 以时间降序获得集合

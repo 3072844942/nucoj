@@ -6,21 +6,12 @@ spring:
     name: judge
   redis:
     port: 6379
-    host: 124.222.45.247
-    password: powerSmart
-
-judge-authorization:
-  user-id: yzl
-  user-secret: yzl
-  expired-in: 14400
-  secret-key: secret
-
-application:
-  version: V1.0.0
+    host: 124.222.45.247 # 自己的地址
+    password: powerSmart # redis密码
 
 eureka:
   instance:
     prefer-ip-address: true  #注册服务的时候使用服务的ip地址进行注册
   client:
     service-url:
-      defaultZone: http://124.222.45.247:8100/eureka/
+      defaultZone: http://124.222.45.247:8100/eureka/ # 替换中间自己的地址

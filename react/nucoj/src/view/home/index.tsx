@@ -71,7 +71,7 @@ function Index(props: any) {
     return (
             <div style={{
                 display: 'flex',
-                margin: '3vh 4vw 3vh 6vw'
+                margin: '3vh 4vw 3vh 3vw'
             }}>
                 <div style={{
                 }}>

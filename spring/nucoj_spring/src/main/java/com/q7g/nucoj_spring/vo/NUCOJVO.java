@@ -6,4 +6,5 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Data
 public class NUCOJVO {
     private String title;
+    private String websocketUrl;
 }

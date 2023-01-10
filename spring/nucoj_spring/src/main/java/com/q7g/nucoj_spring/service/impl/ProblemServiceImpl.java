@@ -54,12 +54,28 @@ public class ProblemServiceImpl implements ProblemService {
         return ProblemDTO.of(byId.get(), admin ? 2 : 1);
     }
 
+    /**
+     * 如果没有选择当前的限制选项， 则将所有选项加入条件
+     */
+    private void init(List<String> tags) {
+        if (tags.stream().noneMatch(item -> item.contains("级"))) {
+            for (int i = 1; i <= 13; i ++ ) {
+                String s = i + "级";
+                tags.add(s);
+            }
+        }
+        List<String> serviceTags = tagService.getTags();
+        if (tags.stream().noneMatch(serviceTags::contains)) {
+            tags.addAll(serviceTags);
+        }
+    }
+
     @Override
     public PageDTO<ProblemDTO> getProblems(int current, int size, String keywords, List<String> tags, boolean admin) {
+        init(tags);
         // 分页器
         Pageable pageable = PageRequest.of(current - 1, size);
         // 转换
-        if (tags.size() == 0) tags = tagService.getTags();
         Page<Problem> all = problemRepository.findAllByContextOrAuthorOrTitle(keywords, tags, pageable);
         return (PageDTO<ProblemDTO>) PageDTO.of(
                 all.getTotalElements(),

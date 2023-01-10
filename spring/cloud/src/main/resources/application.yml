@@ -12,4 +12,4 @@ eureka:
         register-with-eureka: false  #不将自己注册到eureka上
         fetch-registry: false  #不从eureka上获取服务的注册信息
         service-url:
-            defaultZone: http://124.222.45.247:8100/eureka/
+            defaultZone: http://124.222.45.247:8100/eureka/ # 替换中间自己的地址

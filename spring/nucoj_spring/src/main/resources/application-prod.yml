@@ -1,25 +1,25 @@
 spring:
     # redis配置
     redis:
-        host: 124.222.45.247
-        password: powerSmart
+        host: 124.222.45.247 # 自己的地址
+        password: powerSmart # redis密码
     rabbitmq:
-        host: 124.222.45.247
+        host: 124.222.45.247 # 自己的地址
     data:
         mongodb:
-            uri: mongodb://admin:124609@124.222.45.247:27017/web
+            uri: mongodb://admin:124609@124.222.45.247:27017/web # mongo连接地址， 记得新建管理用户
 
 eureka:
     instance:
         prefer-ip-address: true  #注册服务的时候使用服务的ip地址进行注册
     client:
         service-url:
-            defaultZone: http://124.222.45.247:8100/eureka/
+            defaultZone: http://124.222.45.247:8100/eureka/ # 替换中间自己的地址
 
 # 上传模式 （http://和最后的/一定不能去！！！）
 upload:
     local:
         # nginx映射本地文件路径
-        url: https://www.static.snak.space/
+        url: https://www.static.snak.space/ # 上传域名
         # 本地文件存储路径
-        path: /usr/local/upload/
+        path: /usr/local/upload/ # 上传地址

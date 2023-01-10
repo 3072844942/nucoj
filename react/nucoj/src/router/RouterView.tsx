@@ -20,35 +20,35 @@ const RouterList: any[] = [
     },
     {
         path: '/contest',
-        component: loading(() => import('../view/contest')),
+        component: loading(() => import('../view/contest/ContestList')),
         meta: {
             title: 'OJ比赛'
         },
     },
     {
         path: '/problem',
-        component: loading(() => import('../view/problem')),
+        component: loading(() => import('../view/problem/ProblemList')),
         meta: {
             title: 'OJ题库'
         },
     },
     {
         path: '/train',
-        component: loading(() => import('../view/train')),
+        component: loading(() => import('../view/train/TrainList')),
         meta: {
             title: 'OJ题单'
         },
     },
     {
         path: '/solution',
-        component: loading(() => import('../view/solution')),
+        component: loading(() => import('../view/solution/SolutionList')),
         meta: {
             title: 'OJ题解'
         },
     },
     {
         path: '/discuss',
-        component: loading(() => import('../view/discuss')),
+        component: loading(() => import('../view/discuss/DiscussList')),
         meta: {
             title: 'OJ分享'
         },
@@ -62,7 +62,7 @@ const RouterList: any[] = [
     },
     {
         path: '/contest/:contestId',
-        component: loading(() => import('../view/contest/Race')),
+        component: loading(() => import('../view/contest/Contest')),
         meta: {
             title: '比赛详情'
         }

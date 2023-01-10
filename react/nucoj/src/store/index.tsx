@@ -15,6 +15,8 @@ const preloadedState:any = {
         login: false, // 是否显示登录框
         register: false, // 是否显示注册框
         forget: false, // 是否显示忘记密码框
+        title: undefined,
+        websocketUrl: undefined,
     }
 }
 

@@ -13,5 +13,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document("info")
 public class NUCOJ {
     private String title;
+    private String websocketUrl;
     private Long time;
 }

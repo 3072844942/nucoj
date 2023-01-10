@@ -1,30 +1,30 @@
 import React, {useEffect, useState} from 'react';
 import Search from "../../component/model/Search";
-import ContestList from "../../component/list/ContestList";
+import TrainList from "../../component/list/TrainList";
 
 /**
- * 比赛页面
+ * 题单页面
  * @constructor
  */
-function Index() {
+function Train() {
     const [value, setValue] = useState("")
 
     useEffect(() => {
-        document.title = '比赛'
+        document.title = '题单'
     }, [])
 
     return (
-        <div style={{
-            margin: '3vh 4vw 3vh 6vw'
-        }}>
-            <div>
+        <div style={{margin: '3vh 4vw 3vh 3vw'}}>
+            <div style={{
+                width: '83vw'
+            }}>
                 <Search value={value} setValue={setValue}/>
             </div>
             <div>
-                <ContestList value={value}/>
+                <TrainList value={value}/>
             </div>
         </div>
     );
 }
 
-export default Index;
+export default Train;

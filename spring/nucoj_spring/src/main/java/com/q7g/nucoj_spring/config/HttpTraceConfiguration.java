@@ -1,10 +1,12 @@
 package com.q7g.nucoj_spring.config;
 
 import com.q7g.nucoj_spring.service.LogService;
+import com.q7g.nucoj_spring.util.JwtUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.filter.OncePerRequestFilter;
 import org.springframework.web.util.ContentCachingRequestWrapper;
 import org.springframework.web.util.ContentCachingResponseWrapper;
@@ -22,7 +24,7 @@ import java.util.Objects;
 /**
  * 日志记录
  */
-//@Configuration
+@Configuration
 public class HttpTraceConfiguration {
     private static final Logger LOGGER = LoggerFactory.getLogger(HttpTraceConfiguration.class);
 
@@ -46,7 +48,6 @@ public class HttpTraceConfiguration {
                     // 查询请求参数
                     String query = "";
                     // 如果不为空
-                    wrappedRequest.getContentAsByteArray();
                     query = new String(wrappedRequest.getContentAsByteArray());
                     if (query.length() > 100)
                         query = query.substring(0, 100) + "...";
@@ -61,13 +62,13 @@ public class HttpTraceConfiguration {
                     // 如果不在白名单
                     if (!white.contains(request.getServletPath()) && !token.equals("")) {
                         try {
-//                            logService.insertLog(
-//                                    request.getServletPath(),
-//                                    request.getMethod(),
-//                                    query,
-//                                    result,
-//                                    JwtUtil.parseJWT(token).getSubject()
-//                            );
+                            logService.insertLog(
+                                    request.getServletPath(),
+                                    request.getMethod(),
+                                    query,
+                                    result,
+                                    JwtUtil.parseJWT(token).getSubject()
+                            );
                         } catch (Exception e) {
                             throw new RuntimeException(e);
                         }

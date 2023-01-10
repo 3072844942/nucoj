@@ -116,6 +116,58 @@ B1007: 文件不存在
 | extraInfo |object  | 额外信息(当前为编译器输出信息) |
 
 
+### 特别判断
+**请求URL：**
+- `/judge/special `
+
+**请求方式：**
+- POST
+
+
+**请求参数示例**
+
+``` json
+{
+    "language": "JAVA",
+    "solutions": [
+        {
+            "stdIn": "http://cdn.yuzzl.top/1596680709217.in",
+            "expectedStdOut": "http://cdn.yuzzl.top/1596680709217.in"
+        }
+    ],
+    "submissionCode":"import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner in = new Scanner(System.in);\n        int a = in.nextInt();\n        int b = in.nextInt();\n        System.out.println(a + b);\n    }\n}",
+    "judgePreference": "OI",
+    "memoryLimit":30000,
+    "outputLimit": 10000,
+    "special": "特殊代码请查询手册",
+    "specialLanguage": "?"
+}
+```
+
+** 返回示例 **
+
+``` json
+  {
+    "judgeResults": [
+        {
+            "realTimeCost": "112",
+            "memoryCost": "26404",
+            "cpuTimeCost": "104",
+            "condition": 0,
+            "stdInPath": "/home/judgeEnvironment/resolutions/e11a6dc4-b882-4e18-9ea5-8f9582fc4a60/solution.in",
+            "stdOutPath": "/home/judgeEnvironment/submissions/c4154a3e-4105-445c-84e4-dd92d4086f2b/running_0.out",
+            "stdErrPath": "/home/judgeEnvironment/submissions/c4154a3e-4105-445c-84e4-dd92d4086f2b/running_0.err",
+            "message": "ACCEPT",
+            "answer: null
+        }
+    ],
+    "submissionId": "c4154a3e-4105-445c-84e4-dd92d4086f2b",
+    "judgeEndTime": 1599143354314,
+    "extraInfo": []
+}
+```
+
+
 ### 执行判题 -- A + B Problem(C)
 **请求URL：** 
 

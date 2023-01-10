@@ -39,6 +39,7 @@ const ControllerReducer = (preState: ControllerInfo, action:any) => {
             return newState
         case UPDATE_BLOG:
             newState.title = action.payload.title
+            newState.websocketUrl = action.payload.websocketUrl
             return newState
         default:
             return {...preState}

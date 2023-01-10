@@ -1,4 +1,4 @@
-![image-20221216202545117](.\assets\image-20221216202545117.png)
+![image-20221216202545117](./assets/image-20221216202545117.png)
 
 <p align=center>
    基于Springboot + React 开发的前后端分离分布式在线评测平台
@@ -19,12 +19,12 @@
 
 ### 在线地址
 
-**项目链接**：[https://www.snak.space/](https://www.snak.space/)
+**项目链接**：[https://www.snak.space/](https://www.snak.space/)  
 
-**后台地址**：[https://www.admin.snak.space/](https://www.admin.snak.space/)
-**测试账号**： 账号: test@qq.com, 密码: Aa1234567。
-**Github地址**：[https://github.com/3072844942/nucoj](https://github.com/3072844942/nucoj)
-**在线接口地址**: [https://www.snak.space/api/doc.html](https://www.snak.space/api/doc.html)
+**后台地址**：[https://www.admin.snak.space/ ](https://www.admin.snak.space/) 
+**测试账号**： 账号: test@qq.com, 密码: Aa1234567。  
+**Github地址**：[https://github.com/3072844942/nucoj  ](https://github.com/3072844942/nucoj)
+**在线接口地址**: [https://www.snak.space/api/doc.html ](https://www.snak.space/api/doc.html) 
 
 ### 目录结构
 

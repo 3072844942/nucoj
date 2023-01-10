@@ -22,7 +22,7 @@ import static com.q7g.nucoj_spring.enums.PermissionEnum.*;
 
 @SpringBootApplication
 @EnableScheduling
-@EnableEurekaClient
+//@EnableEurekaClient
 public class NucojSpringApplication {
     public static void main(String[] args) {
         SpringApplication.run(NucojSpringApplication.class, args);

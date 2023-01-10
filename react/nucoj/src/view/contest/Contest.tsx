@@ -17,7 +17,7 @@ import ContestContainer from "../../component/container/ContestContainer";
  * 比赛详情
  * @constructor
  */
-function Race(props: { userId: string }) {
+function Contest(props: { userId: string }) {
     const [data, setData] = useState<ContestInfo>();
     const [time, setTime] = useState(0);
     const params = useParams();
@@ -198,4 +198,4 @@ const mapStatusToProps = (status: any) => {
     }
 }
 
-export default connect(mapStatusToProps)(Race);
+export default connect(mapStatusToProps)(Contest);

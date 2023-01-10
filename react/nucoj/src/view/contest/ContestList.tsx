@@ -1,30 +1,30 @@
 import React, {useEffect, useState} from 'react';
 import Search from "../../component/model/Search";
-import DiscussList from "../../component/list/DiscussList";
+import ContestList from "../../component/list/ContestList";
 
 /**
- * 讨论页面
+ * 比赛页面
  * @constructor
  */
-function Index() {
+function Contest() {
     const [value, setValue] = useState("")
 
     useEffect(() => {
-        document.title = '讨论！'
+        document.title = '比赛'
     }, [])
 
     return (
         <div style={{
-            margin: '3vh 4vw 3vh 6vw'
+            margin: '3vh 4vw 3vh 3vw'
         }}>
             <div>
                 <Search value={value} setValue={setValue}/>
             </div>
             <div>
-                <DiscussList value={value}/>
+                <ContestList value={value}/>
             </div>
         </div>
     );
 }
 
-export default Index;
+export default Contest;

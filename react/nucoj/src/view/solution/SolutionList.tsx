@@ -6,7 +6,7 @@ import SolutionList from "../../component/list/SolutionList";
  * 题解页面
  * @constructor
  */
-function Index() {
+function Solution() {
     const [value, setValue] = useState("")
 
     useEffect(() => {
@@ -14,7 +14,7 @@ function Index() {
     }, [])
 
     return (
-            <div style={{margin: '3vh 4vw 3vh 6vw'}}>
+            <div style={{margin: '3vh 4vw 3vh 3vw'}}>
                 <div style={{
                     width: '83vw'
                 }}>
@@ -27,4 +27,4 @@ function Index() {
     );
 }
 
-export default Index;
+export default Solution;

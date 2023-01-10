@@ -25,6 +25,7 @@ import org.springframework.security.core.parameters.P;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.*;
 
 import static com.q7g.nucoj_spring.enums.FilePathEnum.JUDGE;
@@ -61,8 +62,9 @@ class NucojSpringApplicationTests {
     @Value("${upload.local.path}")
     private String localPath;
 
-    @Value("${oj.judgeAddress}")
-    private String judgeAddress;
+    @Autowired
+    private NUCOJRepository nucojRepository;
+
 
     @Autowired
     private ProblemService problemService;

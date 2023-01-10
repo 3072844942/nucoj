@@ -34,9 +34,6 @@ import static com.q7g.nucoj_spring.enums.FilePathEnum.*;
 @Service
 public class JudgeServiceImpl implements JudgeService {
 
-    @Value("${oj.judgeAddress}")
-    private String judgeAddress;
-
     /**
      * 本地路径
      */

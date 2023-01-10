@@ -8,7 +8,7 @@ import {connect} from "react-redux";
  * 题库页面
  * @constructor
  */
-function Index(props: { userId: string }) {
+function Problem(props: { userId: string }) {
     const [value, setValue] = useState<string>("") // 输入框搜索值
     const [tags, setTags] = useState<string[]>([]) // 难度等级/题目标签等
 
@@ -29,7 +29,7 @@ function Index(props: { userId: string }) {
     }
 
     return (
-        <div style={{margin: '3vh 0 3vh 6vw'}}>
+        <div style={{margin: '3vh 0 3vh 3vw'}}>
             <div style={{
                 width: '70vw'
             }}>
@@ -62,4 +62,4 @@ const mapStateToProps = (state: any) => {
     }
 }
 
-export default connect(mapStateToProps)(Index);
+export default connect(mapStateToProps)(Problem);

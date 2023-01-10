@@ -8,6 +8,8 @@ class CloudApplicationTests {
 
     @Test
     void contextLoads() {
+        String t = "123";
+        String[] s = t.split(" ");
     }
 
 }
